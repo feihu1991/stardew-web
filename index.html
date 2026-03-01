@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>星露谷物语 - 网页版</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <!-- Top Bar -->
+            <div id="top-bar">
+                <div class="stat-box">
+                    <span class="stat-icon">💰</span>
+                    <span id="money-display">500</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">📅</span>
+                    <span id="day-display">第1天</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">🌸</span>
+                    <span id="season-display">春季</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">⭐</span>
+                    <span id="level-display">Lv.1</span>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div id="bottom-bar">
+                <button id="inventory-btn" class="ui-btn">🎒 背包</button>
+                <button id="shop-btn" class="ui-btn">🏪 商店</button>
+                <button id="save-btn" class="ui-btn">💾 存档</button>
+            </div>
+        </div>
+        
+        <!-- Modal Panels -->
+        <div id="inventory-panel" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🎒 背包</h2>
+                    <button class="close-btn">✕</button>
+                </div>
+                <div id="inventory-grid"></div>
+            </div>
+        </div>
+        
+        <div id="shop-panel" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🏪 商店</h2>
+                    <button class="close-btn">✕</button>
+                </div>
+                <div id="shop-grid"></div>
+            </div>
+        </div>
+        
+        <!-- Notifications -->
+        <div id="notification-area"></div>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
